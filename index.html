@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="https://unpkg.com/simple-statistics@5.0.0/dist/simple-statistics.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.9.7/d3.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+    <title>Tesla Financial Report</title>
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <br>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="jumbotron">
+                    <h1 id="headly">
+                        Tesla Financial Report
+                        <span id="report-date" style="float: right;">2016-2017</span>
+                    </h1>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- <form class="form-inline">
+          <div class="form-group">
+            <label for="stockInput">Stock</label>
+            <input type="text" class="form-control" id="stockInput" placeholder="Enter a stock">
+          </div>
+          <button id="submit" type="submit" class="btn btn-default">Plot Stock</button>
+        </form>
+ -->
+
+
+
+        <!--  -->
+        <div class="row">
+            <div class="col-md-12">
+                <h2> Company Profile</h2>
+
+                <p class="profile">Tesla, Inc. (formerly Tesla Motors, Inc.) is an American electric vehicle and clean energy company based in Palo Alto, California. <br> Tesla's current products include electric cars, battery energy storage from home to grid scale, solar
+                    panels and solar roof tiles, as well as other related products and services.<br> Founded in July 2003 as Tesla Motors, the company's name is a tribute to inventor and electrical engineer Nikola Tesla. Elon Musk, who contributed most
+                    of the funding in the early days, has served as CEO since 2008. According to Musk, the purpose of Tesla is to help expedite the move to sustainable transport and energy, obtained through electric vehicles and solar power.<br>
+                </p>
+
+            </div>
+        </div>
+
+
+
+
+
+        <!--  -->
+        <div class="row">
+            <div class="col-md-12">
+                <p class="other">Tesla ranked as the world's best-selling plug-in and battery electric passenger car manufacturer in 2019, with a market share of 17% of the plug-in segment and 23% of the battery electric segment. Tesla global vehicle sales were 499,550
+                    units in 2020, a 35.8% increase over the previous year. In 2020, the company surpassed the 1 million mark of electric cars produced. The Model 3 ranks as the world's all-time best-selling plug-in electric car, with more than 500,000
+                    delivered. Through its subsidiary SolarCity, Tesla develops and is a major installer of solar photovoltaic systems in the United States. Tesla is also one of the largest global suppliers of battery energy storage systems, from home-scale
+                    to grid-scale. Tesla installed some of the largest battery storage plants in the world and supplied 1.65 GWh of battery storage in 2019.<br> Tesla has been the subject of numerous lawsuits and controversies, arising from the statements
+                    and the conduct of CEO Elon Musk, allegations of whistleblower retaliation, alleged worker rights violations, and allegedly unresolved and dangerous technical problems with their products.<br></p>
+
+            </div>
+        </div>
+
+
+
+
+        <!--    -->
+        <div class="row">
+            <div class="col-md-12">
+                <p>plot should appear below</p>
+                <div id="plot">
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <!--  -->
+
+        <div class="row">
+            <div class="col-md-12">
+                <table id="summary-table" class="table table-striped table-inverse">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Open</th>
+                            <th>High</th>
+                            <th>Low</th>
+                            <th>Close</th>
+                            <th>Volume</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <br>
+    <script src="plots.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
